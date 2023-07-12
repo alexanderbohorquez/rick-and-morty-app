@@ -17,6 +17,9 @@ function App() {
 
       
       <Random ></Random>
+      <footer className="footer">
+        <p className="footer__text">Creado por Alexander Bohorquez  </p>
+      </footer>
     </div>
   )
 }

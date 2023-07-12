@@ -29,7 +29,7 @@ const Random = () => {
             } else {
                 alert("Location not found");
             }
-            setSearchLocation(""); // Limpiar el campo de entrada después de la búsqueda
+            setSearchLocation("");
         }
     };
 
@@ -62,7 +62,7 @@ const Random = () => {
                         onChange={(e) => setSearchLocation(e.target.value)}
                         onKeyPress={handleKeyPress}
                     />
-                    {/* <button onClick={handleSearch} className="input__button">Search</button> */}
+                    <button onClick={handleSearch} className="input__button">Search</button>
                 </div>
             </div>
             <div >

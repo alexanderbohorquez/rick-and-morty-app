@@ -37,14 +37,15 @@ body {
 
 .input__container {
     display: flex;
-    gap: 10px;
+    flex-direction: column;
     align-items: center;
+    gap: 10px;
     order: 2;
 }
 
 .input {
     flex: 1;
-    max-width: 350px;
+    max-width: 300px;
     width: 600px;
     height: 40px;
     padding: 5px 10px;
@@ -86,6 +87,28 @@ body {
 .input[type="number"] {
     -moz-appearance: textfield;
 }
+
+
+.input__button {
+    padding: 8px 16px;
+    border-radius: 5px;
+    background-color: #2f2f31;
+    border: 1px solid #5CAD4A;
+    color: #fff;
+    font-size: 16px;
+    
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .input__button:hover {
+    background-color: #429D3C;
+  }
+  
+  .input__button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(92, 173, 74, 0.5);
+  }
 
 .card__location {
     background-color: #2f2f31;
@@ -218,9 +241,9 @@ body {
     display: flex;
     justify-content: center;
     margin-top: 20px;
-}
-
-.page-number-button {
+  }
+  
+  .page-number-button {
     padding: 8px 12px;
     margin: 0 5px;
     border: 1px solid #5CAD4A;
@@ -229,9 +252,37 @@ body {
     color: #5CAD4A;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.page-number-button.active {
+  }
+  
+  .page-number-button.active {
     background-color: #5CAD4A;
     color: #2f2f31;
-}
+  }
+  
+  @media (max-width: 576px) {
+    .page-numbers-container {
+      flex-wrap: wrap;
+    }
+  
+    .page-number-button {
+      margin: 5px;
+    }
+  }
+  
+  @media (max-width: 320px) {
+    .page-number-button {
+      padding: 6px 10px;
+    }
+  }
+  
+
+  .footer {
+    background-color: #2f2f31;
+    color: #5CAD4A;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .footer__text {
+    margin: 0;
+  }
