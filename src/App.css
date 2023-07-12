@@ -1,0 +1,237 @@
+* {
+    font-family: 'Fira Code', monospace;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: aliceblue;
+}
+
+.header {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.logo__container {
+    display: flex;
+    align-items: center;
+    order: 1;
+}
+
+.logo {
+    max-width: 300px;
+    max-height: 100%;
+}
+
+.input__container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    order: 2;
+}
+
+.input {
+    flex: 1;
+    max-width: 350px;
+    width: 600px;
+    height: 40px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #5CAD4A;
+    font-size: 16px;
+    background-color: #2f2f31;
+    color: #5CAD4A;
+    transition: box-shadow 0.3s ease;
+}
+
+.input:focus {
+    outline: none;
+    border-color: #5CAD4A;
+    box-shadow: 0 0 5px rgba(92, 173, 74, 0.5);
+}
+
+.input::placeholder {
+    color: #5CAD4A;
+}
+
+@media (max-width: 576px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .input__container {
+        margin-top: 10px;
+    }
+}
+
+.input::-webkit-inner-spin-button,
+.input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.card__location {
+    background-color: #2f2f31;
+    border: 1px solid #5CAD4A;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 300px;
+    width: 100%;
+}
+
+.card__location h1 {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #5CAD4A;
+}
+
+.card__location p {
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.card__location strong {
+    font-weight: bold;
+    color: #5CAD4A;
+}
+
+@media (max-width: 576px) {
+    .card__location {
+        margin: 10px auto;
+    }
+}
+
+.card__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.resident__card {
+    background-color: #2f2f31;
+    border: 1px solid #5CAD4A;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: calc(20% - 20px);
+    margin: 10px;
+    display: inline-block;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.resident__image {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+.resident__name {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.info__status {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.status-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid #5CAD4A;
+    padding: 2px;
+    border-radius: 4px;
+}
+
+.status {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.status__text {
+    color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.resident__info {
+    margin-bottom: 5px;
+    color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media (max-width: 992px) {
+    .resident__card {
+        width: calc(33.33% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .resident__card {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 576px) {
+    .resident__card {
+        width: calc(100% - 20px);
+    }
+}
+
+
+.page-numbers-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.page-number-button {
+    padding: 8px 12px;
+    margin: 0 5px;
+    border: 1px solid #5CAD4A;
+    border-radius: 4px;
+    background-color: #2f2f31;
+    color: #5CAD4A;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.page-number-button.active {
+    background-color: #5CAD4A;
+    color: #2f2f31;
+}
